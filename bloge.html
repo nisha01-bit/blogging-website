@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    font-family: Poppins, sans-serif;
+    background: #f3f4f6;
+}
+
+.profile-card{
+    width: 350px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+
+.profile{
+    text-align: center;
+}
+
+.profile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h2{
+    margin: 10px 0 6px;
+}
+
+.details h3{
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+form input, form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover{
+    background: #333;
+}
+
+</style>
+<body>
+    <div class="profile-card">
+    <div class="profile">
+        <img src="IMG_20221215_123013.jpg" alt="Profile">
+        <h2>Nisha Jatav</h2>
+        <p>Blogger • Frontend Developer</p>
+    </div>
+
+    <div class="details">
+        <h3>Education</h3>
+        <p>B.Tech (Computer Science), 2020-2024</p>
+
+        <h3>Profession</h3>
+        <p>Frontend Developer at XYZ Company</p>
+
+        <h3>Contact Me</h3>
+        <form onsubmit="sendmsg(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message..." rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function sendmsg(e){
+    e.preventDefault();
+    alert("Message Sent Successfully!");
+}
+</script>
+
+</body>
+</html>

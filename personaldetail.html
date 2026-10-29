@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+   background-color: cadetblue;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+
+/* Content */
+.content{
+    margin: 80px 200px 100px 200px;
+    flex:1;
+    padding:60px;
+    background:#fff;
+    border-radius: 10px;
+}
+
+.tag{
+    background:red;
+    color:#fff;
+    border-radius: 8px 8px 8px 0;
+    padding:5px 12px;
+    font-size:12px;
+}
+h1{
+    margin: 5px 0 0 -5px;
+}
+.subtitle{
+    margin:15px 0 30px;
+    color:#777;
+}
+
+/* Profile Box */
+.profile-box{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+}
+
+.profile-box img{
+    width:180px;
+    height:180px;
+    border-radius:20% 0 20% 0;
+    object-fit:cover;
+}
+
+.details{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:15px 40px;
+}
+
+.info{
+    color:#444;
+}
+
+.buttons{
+    grid-column:1/3;
+    margin-top:20px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    background:black;
+    color:white;
+    margin-right:10px;
+    cursor:pointer;
+}
+
+button.outline{
+    background:white;
+    color:black;
+    border:1px solid black;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <span class="tag">HELLO!</span>
+        <h1>Author Niaha</h1>
+        <p class="subtitle">Hi I am computer science student from Samrat Ashok Technological Institute.</p>
+
+        <div class="profile-box">
+            <img src="IMG_20221215_123013.jpg" alt="profile">
+
+            <div class="details">
+                <div class="info"><b>First Name:</b> Nisha Jatav</div>
+                <div class="info"><b>State Name:</b> Madhaya Predesh</div>
+                <div class="info"><b>Date of Birth:</b> 01 Jan 2004</div>
+                <div class="info"><b>Nationality:</b> Indian</div>
+
+                <div class="info"><b>Phone:</b> 9179300931</div>
+                <div class="info"><b>Email:</b> nishasc00931@gmail.com</div>
+                <div class="info"><b>Address:</b>Jargoan Dabra Gwalior M.P.</div>
+                <div class="info"><b>Languages:</b> English, Hindi</div>
+
+                <div class="buttons">
+                    <button><a href="Nisha Resume.pdf" download="resume_nisha123">Download Resume</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

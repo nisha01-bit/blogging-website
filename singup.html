@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #66a8ead8, #4ba29ede);
+        }
+
+        .signup-box{
+            background: #1b7873de;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            display: block;
+        }
+
+        .signup-box h2{
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-box{
+            margin-bottom: 15px;
+        }
+
+        .input-box input{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .input-box span{
+            color: red;
+            font-size: 12px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #667eea;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #5a67d8;
+        }
+
+        .login-text{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-box">
+    <h2>Sign Up</h2>
+
+    <div class="input-box">
+        <input type="text" id="username" placeholder="Username">
+        <span id="uerr"></span>
+    </div>
+
+    <div class="input-box">
+        <input type="email" id="email" placeholder="Email">
+        <span id="eerr"></span>
+    </div>
+
+    <div class="input-box">
+        <input type="password" id="password" placeholder="Password">
+        <span id="perr"></span>
+    </div>
+
+    <div class="input-box">
+        <input type="password" id="cpassword" placeholder="Confirm Password">
+        <span id="cerr"></span>
+    </div>
+
+    <button onclick="signup()">Create Account</button>
+
+    <div class="login-text">
+        Already have an account? <a href="login.html">Login</a>
+    </div>
+</div>
+
+<script>
+function signup(){
+    let user = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("password").value;
+    let cpass = document.getElementById("cpassword").value;
+
+    let valid = true;
+
+    if(user === ""){
+        document.getElementById("uerr").innerHTML = "Username required";
+        valid = false;
+    }else{
+        document.getElementById("uerr").innerHTML = "";
+    }
+
+    if(email === ""){
+        document.getElementById("eerr").innerHTML = "Email required";
+        valid = false;
+    }else{
+        document.getElementById("eerr").innerHTML = "";
+    }
+
+    if(pass.length < 6){
+        document.getElementById("perr").innerHTML = "Min 6 characters";
+        valid = false;
+    }else{
+        document.getElementById("perr").innerHTML = "";
+    }
+
+    if(pass !== cpass){
+        document.getElementById("cerr").innerHTML = "Passwords do not match";
+        valid = false;
+    }else{
+        document.getElementById("cerr").innerHTML = "";
+    }
+
+    if(valid){
+        alert("Signup Successful 🎉");
+    }
+    
+
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins,sans-serif;
+}
+#nav{
+    height: 70px;
+    border-bottom: 1px solid gray;
+    background-color: #0C2C55;
+    box-shadow: 0 0 3px 0 rgb(138, 135, 135);
+    display: flex;
+   justify-content: space-between;
+    
+}
+.effect{
+    animation: text 4s steps(22) forwards;
+    white-space: nowrap;
+}
+@keyframes text{
+    from{left:100;}
+    to{left:500px;}
+}
+#image{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(120, 119, 119);
+    border-radius: 50%;
+    display: inline-block;
+    border: 3px solid linear-gradient(red 40%, yellow 30%, blue 65%);
+    align-self: center;
+   margin-left: 80px;
+}
+#image img{
+    border-radius: 50%;
+}
+#list li{
+    display: inline-block;
+    padding: 30px;
+}
+#list a{
+    text-decoration: none;
+    color: white;
+}
+#list a:hover{
+    color: rgb(232, 93, 24);
+    border-radius: 5px;
+}
+#btn{
+    align-content: center;
+    box-sizing: border-box;
+    margin-right: 80px;
+}
+.btn1{
+    width: 80px;
+    height: 40px;
+    color: white;
+    margin: 8px;
+    border-radius: 10px;
+}
+#btnbg1{
+    background-color: rgba(244, 55, 55, 0.838);
+}
+#btnbg1:hover{
+    background-color: aliceblue;
+    color: rgb(20, 20, 18);
+}
+#btnbg2{
+    background-color: rgb(54, 54, 228);
+}
+#btnbg2:hover{
+    background-color: rgb(235, 148, 148);
+    color: white;
+}
+#header{
+    background-color: #296374;
+    height: 400px;
+    display: flex;
+}
+#details{
+  padding: 100px 0 0 100px;
+  text-align: left;
+  font-family: fantasy;
+}
+#details h1{
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#details p{
+    padding-top: 10px;
+    color: whitesmoke;
+}
+#img2 {
+    margin-left: 800px;
+    align-self: center;
+    border-radius: 10px;
+    position: absolute;
+    animation-name: slidimg;
+    animation-direction: normal;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+@keyframes slidimg{
+    from{
+        right: 200px;
+        opacity: 0;
+    }
+    to{
+        right: 80px;
+        opacity: 1;
+    }
+}
+.container{
+    display: flex;
+    background-color: cadetblue;
+    justify-content: space-evenly;
+}
+.card{
+    background: linear-gradient(135deg, #cfe4a1c3, #de6cdc9a, rgba(0, 195, 255, 0.605));
+    padding:20px;
+    width: 400px;
+    height: 250px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    margin: 30px 20px 30px 20px;
+    text-align: center;
+    transition:0.6s ease;
+    animation: fadeUp 1.5s ease normal;
+    animation-delay: 1s;
+}
+@keyframes fadeUp{
+    from{
+        transform:translatey(60px);
+        opacity:0;
+    }
+    to{
+        transform:translatey(0);
+        opacity:1;
+    }
+}
+.card:hover{
+    transform:translateY(-10px);
+}
+.card h2{
+    margin-bottom:7px;
+    color:#333;
+}
+.card p{
+    color:#555;
+    line-height:1.6;
+}
+.profile img{
+    width:100px;
+    height:100px;
+    margin-left: 70px;
+    border-radius:10px;
+    display:block;
+    margin-bottom:10px;
+}
+.filelink{
+    height: 30px;
+    width: 70px;
+    background-color: rgb(239, 226, 87);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.singup a{
+    text-decoration: none;
+    color:#555;
+}
+.singup a:hover{
+    color: blue;
+}
+#details{
+    
+}
+
+

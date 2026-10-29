@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Education Section</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height:100vh;
+}
+
+/* Section */
+.edu-section{
+    padding:80px 10%;
+}
+
+/* Typing Effect */
+.typing{
+    text-align:center;
+    font-size:45px;
+    color:#fff;
+    margin-bottom:60px;
+    overflow:hidden;
+    white-space:nowrap;
+    animation: typing 4s forwards;
+}
+
+@keyframes typing{
+    from{width:0;}
+    to{width:50%;}
+}
+
+
+/* Cards Layout */
+.edu-wrapper{
+    display:grid;
+    grid-template-columns: 300px 300px 300px;
+    gap:35px;
+}
+
+/* Education Card */
+.edu-box{
+    background: rgba(255,255,255,0.15);
+    width: 300px;
+    backdrop-filter: blur(12px);
+    padding:30px;
+    border-radius:22px;
+    color:#fff;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+    transition:0.6s ease;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+
+
+@keyframes fadeUp{
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+.edu-box:hover{
+    transform: translateY(-20px) scale(1.03);
+}
+
+/* Tag */
+.tag{
+    background:#fff;
+    color:#000;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    display:inline-block;
+    margin-bottom:15px;
+}
+
+/* Text */
+.edu-box h2{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.edu-box p{
+    font-size:16px;
+    opacity:0.9;
+}
+
+.edu-box small{
+    display:block;
+    margin-top:10px;
+    opacity:0.8;
+}
+.graduation{
+    margin: 20px 12px 0 -3px;
+    font-family: 'Poppins', sans-serif;
+    height: 180px;
+}
+
+.graduation table{
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.graduation thead{
+    color: #fff;
+}
+
+.graduation th,
+.graduation td{
+    text-align: center;
+    font-size: 14px;
+    width: 150px;
+}
+
+.graduation th{
+    letter-spacing: 0.5px;    
+}
+/* Body rows */
+
+.graduation tbody tr:hover{
+    background-color: #e0f2f1;
+    transform: scale(1.01);
+    color: #0f2027;
+}
+
+/* borders */
+.graduation table,
+.graduation th,
+.graduation td{
+    border: 1px solid white;
+}
+#Graduation,#highSecondary,#highs{
+    display: none;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<section class="edu-section">
+    <h1 class="typing">Education Blog Section</h1>
+
+    <div class="edu-wrapper">
+        <div class="edu-box"  id="box1" onclick="grad_box()">
+            <span class="tag">2022 – 2026</span>
+            <h2>Graduation</h2>
+            <p>Computer Science Engineering B.Tech (CSE)</p>
+            <small>Samrat Ashok Technological Institute.</small>
+            <div class="graduation" id="Graduation">
+             <table>
+                <thead>
+                    <tr>
+                        <th><strong>Semesters</strong></th>
+                        <th><strong>CGPA</strong></th>
+                        <th><strong>Years</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semester1</td>
+                        <td>5.60</td>
+                        <td class="semester">2022-2023</td>
+                    </tr>
+                    <tr>
+                        <td>Semester2</td>
+                        <td>5.92</td>
+                        <td class="semester">2023-2023</td>
+                    </tr>
+                    <tr>
+                        <td>Semester3</td>
+                        <td>5.35</td>
+                        <td class="semester">2023-2024</td>
+                    </tr>
+                    <tr>
+                        <td>Semester4</td>
+                        <td>5.93</td>
+                        <td class="semester">2024-2024</td>
+                    </tr>
+                    <tr>
+                        <td>Semester5</td>
+                        <td> 5.98</td>
+                        <td class="semester">2024-2025</td>
+                    </tr>
+                    <tr>
+                        <td>Semester6</td>
+                        <td>6.10</td>
+                        <td class="semester">2025-2025</td>
+                    </tr>
+                    <tr>
+                        <td>Semester7</td>
+                        <td>6.34</td>
+                        <td class="semester">2025-2026</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Overall CGPA</strong></td>
+                        <td>6.34</td>
+                    </tr>
+                </tfoot>
+             </table>
+             </div>
+        </div>
+
+        <div class="edu-box" id="box2" onclick="hs_box()">
+            <span class="tag">2019 – 2021</span>
+            <h2>Higher Secondary</h2>
+            <p>Mathmetics Stream</p>
+            <small>PRD Higher Secondary School</small>
+             <div class="graduation" id="highSecondary">
+               <table>
+                <thead>
+                    <tr>
+                        <th>Subjects</th>
+                        <th>Marks</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                   <tr>
+                    <td>Hindi</td>
+                    <td>77</td>
+                   </tr>
+                   <tr>
+                    <td>English</td>
+                    <td>74</td>
+                   </tr>
+                   <tr>
+                    <td>Physics</td>
+                    <td>78</td>
+                   </tr>
+                   <tr>
+                    <td>Chemistry</td>
+                    <td>75</td>
+                   </tr>
+                   <tr>
+                    <td>Mathmetics</td>
+                    <td>78</td>
+                   </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>score:</td>
+                        <td>382</td>
+                    </tr>
+                </tfoot>
+               </table>
+            </div>
+        </div>
+
+        <div class="edu-box" id="box3" onclick="school_box()">
+            <span class="tag">2018 – 2019</span>
+            <h2>High School</h2>
+            <p>General Studies</p>
+            <small>PRD High School</small>
+            <div class="graduation" id="highs">
+               <table>
+                <thead>
+                    <tr>
+                        <th>Subjects</th>
+                        <th>Marks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                    <td>Hindi</td>
+                    <td>74</td>
+                   </tr>
+                   <tr>
+                    <td>English</td>
+                    <td>74</td>
+                   </tr>
+                   <tr>
+                    <td>Sanskrit</td>
+                    <td>73</td>
+                   </tr>
+                   <tr>
+                    <td>Mathmetics</td>
+                    <td>78</td>
+                   </tr>
+                   <tr>
+                    <td>Science</td>
+                    <td>78</td>
+                   </tr>
+                   <tr>
+                    <td>Social Science</td>
+                    <td>59</td>
+                   </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>score:</td>
+                        <td>377</td>
+                    </tr>
+                </tfoot>
+               </table>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function grad_box(){
+          document.getElementById("Graduation").style.display ="block";
+          document.getElementById("box2").style.maxHeight ="200px";
+          document.getElementById("box3").style.maxHeight ="200px";
+          document.getElementById("box1").style.maxHeight ="400px";
+          document.getElementById("highSecondary").style.display ="none";
+          document.getElementById("highs").style.display ="none";
+          
+          return;
+    }
+   
+    function hs_box(){
+          document.getElementById("highSecondary").style.display ="block";
+          document.getElementById("box1").style.maxHeight ="400px";
+          document.getElementById("box2").style.maxHeight ="400px";
+          document.getElementById("box3").style.maxHeight ="200px";
+          return;
+    }
+
+    function school_box(){
+          document.getElementById("highs").style.display ="block";
+          document.getElementById("box3").style.maxHeight ="400px";
+          document.getElementById("Graduation").style.display ="block";
+          document.getElementById("box1").style.maxHeight ="400px";
+          document.getElementById("highSecondary").style.display ="block";
+          document.getElementById("box2").style.maxHeight ="400px";
+          return;
+    }
+    /*const gradBox = document.getElementById("box1");
+    const hsBox = document.getElementById("box2");
+    const schoolBox = document.getElementById("box3");
+
+    const graduation = document.getElementById("Graduation");
+    const highSecondary = document.getElementById("highSecondary");
+    const highs = document.getElementById("highs");
+
+    gradBox.addEventListener("click", function(){
+    graduation.style.display = "block";
+    hsBox.style.maxHeight = "200px";
+    schoolBox.style.maxHeight = "200px";
+    
+});
+
+  hsBox.addEventListener("click", function(){
+    highSecondary.style.display = "block";
+    hsBox.style.maxHeight = "400px";
+    
+
+    
+});
+
+  schoolBox.addEventListener("click", function(){
+    highs.style.display = "block";
+    schoolBox.style.maxHeight = "400px"
+    
+});*/
+</script>
+
+</body>
+</html>
+
+

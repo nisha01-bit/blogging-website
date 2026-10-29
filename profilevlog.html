@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vloging website</title>
+    <link rel="stylesheet" href="profilevlog.css">
+</head>
+<body>
+    <div id="nav">
+        <div id="image" class="hcontent">
+            <img src="IMG_20221215_123013.jpg" height="60px" width="60px">
+        </div>
+        <div id="list" class="hcontent">
+            <ul>
+                <li><a href="personaldetail.html" target="_blank">profile</a></li>
+                <li><a href="education.html" target="_blank">Education</a></li>
+                <li><a href="profesion.html" target="_blank">Profesion</a></li>
+                <li><a href="singup.html" target="_blank">Registration</a></li>
+            </ul>
+        </div>
+        <div id="btn" class="hcontent">
+            <button type="button" class="btn1" id="btnbg1" onclick="singup()">Sign up</button>
+            <button type="button" class="btn1" id="btnbg2" onclick="login()">login</button>
+        </div>
+    </div>
+    <div id="header">
+        <div id="details">
+            <h1 class="effect">Hi, I'm Nisha</h1>
+            <h3>Welcome to my blogging website!</h3>
+            <p>Full Stack Developer |</p>
+            <p>computer science student passinate about creating websites.
+            </p>
+        </div>
+        <div id="img2">
+            <img src="develop-coding-web-design-coding-web-template.jpg" width="400px" height="310px" style="border-radius: 10px;">
+        </div>
+    </div>
+    
+<div class="container">
+
+    <!-- Profile Card -->
+    <div class="card profile" onclick="showdetails()">
+        <img src="6515859.webp" alt="Profile">
+        <h2>Profile</h2>
+        <p><strong>Name:</strong> Nisha Jatav</p>
+        <p><strong>DOB:</strong>01/01/2004</p>
+        <button class="filelink"><a href="personaldetail.html" target="_blank">click</a></button>
+    </div>
+
+    <!-- Education Card -->
+    <div class="card profile" onclick="education_data()">
+        <img src="premium_photo-1677567996070-68fa4181775a.avif" alt="Education">
+        <h2>Education</h2>
+        <p>Bachelor of Computer Science</p>
+        <p>Final Year Student</p>
+        <p>2022 - 2026</p>
+       <button class="filelink"><a href="education.html">click</a></button>
+    </div>
+
+    <!-- Profession Card -->
+    <div class="card profile" onclick="Profesion()">
+        <img src="photo-1498050108023-c5249f4df085.avif" alt="Profession">
+        <h2>Profession</h2>
+        <p>Web Developer</p>
+        <p>HTML, CSS, JavaScript</p>
+        <p>PHP, SQL</p>
+        <button class="filelink"><a href="profesion.html">click</a></button>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="card profile" onclick="registration()">
+        <img src="3d-hand-hold-smartphone-with-authentication-form.jpg" alt="registration">
+        <h2>Registration</h2>
+        <p class="singup"><a href="singup.html">Sign up</a></p>
+        <p class="singup"><a href="login.html">Login</a></p>
+        <button class="filelink"><a href="singup.html">click</a></button>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+
+    </div>
+</footer>
+    <script>
+        function showdetails(){
+        window.location.href = "personaldetail.html";
+        }
+
+        function education_data(){
+        window.location.href = "education2.html";
+        }
+
+        function showdetails(){
+        window.location.href = "personaldetail.html";
+        }
+        function Profesion(){
+            window.location.href ="profesion.html";
+        }
+        function singup(){
+            window.location.href ="singup.html";
+        }
+        function login(){
+            window.location.href = "login.html";
+        }
+        function registration(){
+            window.location.href ="singup.html";
+        }
+    </script>
+</body>
+</html>

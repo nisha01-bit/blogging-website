@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Developer Profession</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height:100vh;
+}
+
+/* Section */
+.dev-blog{
+    padding:30px 10%;
+}
+
+/* Typing Animation */
+.typing{
+    color:#fff;
+    font-size:45px;
+    text-align:center;
+    margin-bottom:50px;
+    overflow:hidden;
+}
+
+/* Cards Layout */
+.blog-wrapper{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+    gap:40px;
+}
+
+/* Blog Card */
+.blog-card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius:22px;
+    color:#fff;
+    box-shadow:0 25px 50px rgba(0,0,0,0.35);
+    transition:0.6s ease;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.blog-card:nth-child(1){animation-delay:.3s;}
+.blog-card:nth-child(2){animation-delay:.6s;}
+.blog-card:nth-child(3){animation-delay:.9s;}
+
+@keyframes fadeUp{
+    from{
+        transform:translateY(60px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+.blog-card:hover{
+    transform: translateY(-15px) scale(1.05);
+}
+
+/* Badge */
+.badge{
+    display:inline-block;
+    padding:6px 16px;
+    border-radius:20px;
+    background: linear-gradient(90deg,#00dbde,#fc00ff);
+    font-size:13px;
+    margin:15px 0 15px 35px;
+}
+.blog-card img{
+    
+}
+/* Text */
+.blog-card h2{
+    font-size:26px;
+    margin-bottom:15px;
+    padding-left:35px;
+}
+
+.blog-card p{
+    font-size:16px;
+    line-height:1.6;
+    opacity:0.9;
+     padding-left:35px;
+}
+
+.blog-card small{
+    display:block;
+    margin-top:15px;
+    opacity:0.8;
+    color: rgb(255, 221, 0);
+    padding-left:35px;
+    padding-bottom: 20px;
+}
+.blog-card img{
+    border-radius: 22px 22px 0 0;
+}
+</style>
+</head>
+<body>
+
+<section class="dev-blog">
+    <h1 class="typing">Developer Profession</h1>
+
+    <div class="blog-wrapper">
+
+        <div class="blog-card">
+            <img src="html-css-collage-concept.jpg" width="315px" height="200px">
+            <span class="badge">Frontend</span>
+            <h2>Frontend Developer</h2>
+            <p>
+                A Frontend Developer creates beautiful and interactive user
+                interfaces using HTML, CSS, and JavaScript.
+            </p>
+            <small>Skills: • HTML • CSS • JavaScript</small>
+        </div>
+
+        <div class="blog-card">
+            <img src="programming-background-with-person-working-with-codes-computer.jpg" width="315px" height="200px">
+            <span class="badge">Backend</span>
+            <h2>Backend Developer</h2>
+            <p>
+                Backend Developers manage servers, databases, and APIs
+                to power web applications.
+            </p>
+            <small>Skills: Node • PHP • Python • SQL</small>
+        </div>
+
+        <div class="blog-card">
+            <img src="programmer-night.jpg" width="315px" height="200px">
+            <span class="badge">Full Stack</span>
+            <h2>Full Stack Developer</h2>
+            <p>
+                A Full Stack Developer works on both frontend and backend
+                parts of a web application.
+            </p>
+            <small>Skills: MERN • APIs • Cloud</small>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

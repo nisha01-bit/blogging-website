@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+        }
+
+        .login-box{
+            background: #fff;
+            width: 350px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .login-box h2{
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-box{
+            margin-bottom: 15px;
+        }
+
+        .input-box input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .input-box span{
+            font-size: 12px;
+            color: red;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background: #185a9d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #154a85;
+        }
+
+        .extra{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .extra a{
+            text-decoration: none;
+            color: #185a9d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Login</h2>
+
+    <div class="input-box">
+        <input type="email" id="email" placeholder="Email">
+        <span id="eerr"></span>
+    </div>
+
+    <div class="input-box">
+        <input type="password" id="password" placeholder="Password">
+        <span id="perr"></span>
+    </div>
+
+    <button onclick="login()">Login</button>
+
+    <div class="extra">
+        <a href="singup.html">Forgot Password?</a>
+    </div>
+</div>
+
+<script>
+function login(){
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("password").value;
+
+    let valid = true;
+
+    if(email === ""){
+        document.getElementById("eerr").innerHTML = "Email required";
+        valid = false;
+    }else{
+        document.getElementById("eerr").innerHTML = "";
+    }
+
+    if(pass === ""){
+        document.getElementById("perr").innerHTML = "Password required";
+        valid = false;
+    }else{
+        document.getElementById("perr").innerHTML = "";
+    }
+
+    if(valid){
+        alert("Login Successful 🎉");
+    }
+}
+</script>
+
+</body>
+</html>
